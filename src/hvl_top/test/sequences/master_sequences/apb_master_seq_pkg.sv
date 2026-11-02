@@ -19,14 +19,16 @@ package apb_master_seq_pkg;
   // Including required apb master seq files
   //-------------------------------------------------------
   `include "apb_master_base_seq.sv"
-  `include "apb_master_vd_vws_seq.sv"
+  `include "aes_reg_cfg_seq.sv"
+  
+/*`include "apb_master_vd_vws_seq.sv"
   `include "apb_master_8b_write_seq.sv"
   `include "apb_master_8b_write_read_seq.sv"
   `include "apb_master_16b_write_seq.sv"
   `include "apb_master_24b_write_seq.sv"
   `include "apb_master_32b_write_seq.sv"
   `include "apb_master_8b_read_seq.sv"
-
+*/
 endpackage : apb_master_seq_pkg
 
 `endif

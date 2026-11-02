@@ -20,10 +20,11 @@ class apb_master_coverage extends uvm_subscriber #(apb_master_tx);
   covergroup apb_master_covergroup with function sample (apb_master_agent_config cfg, apb_master_tx packet);
     option.per_instance = 1;
 
+
    //To check the number slaves we used
    PSEL_CP : coverpoint slave_no_e'(packet.pselx) {
      option.comment = " psel of apb";
-     bins APB_PSELX[] = {[0:NO_OF_SLAVES]};
+     bins APB_PSELX = {SLAVE_0}; 
    }
 
    PADDR_CP : coverpoint cfg.paddr {
